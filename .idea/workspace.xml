@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ceb4fb8-c448-4cdb-acf0-e808f2cc1155" name="Changes" comment="Added automatic report generator">
+    <list default="true" id="7ceb4fb8-c448-4cdb-acf0-e808f2cc1155" name="Changes" comment="Added timestamp to report log and added alert for excessive login failures">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/system_log_2025-06-25.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spp_log_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/spp_log_checker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,12 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1751178038935</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added timestamp to report log and added alert for excessive login failures">
+      <option name="closed" value="true" />
+      <created>1751180362882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751180362882</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a compliance summary to check for failed logins and expired certs" />
     <MESSAGE value="Added automatic report generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added automatic report generator" />
+    <MESSAGE value="Added timestamp to report log and added alert for excessive login failures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added timestamp to report log and added alert for excessive login failures" />
   </component>
 </project>

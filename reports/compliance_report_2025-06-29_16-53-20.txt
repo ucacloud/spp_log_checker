@@ -1,0 +1,15 @@
+=== Compliance Summary === 
+
+Failed Login Attempts:
+ - user1: 3 failed attempt(s)
+ - admin: 1 failed attempt(s)
+ - intern: 4 failed attempt(s)
+
+Potential Security Alerts:
+ !! ALERT: user1 had 3 failed logins
+ !! ALERT: intern had 4 failed logins
+
+Expired Certificates:
+ - certB
+ - certC
+ - certE

@@ -1,0 +1,9 @@
+=== Compliance Summary === 
+
+Failed Login Attempts:
+ - user1: 3 failed attempt(s)
+
+Potential Security Alerts:
+ !! ALERT: user1 had 3 failed logins
+
+No expired certifications found. 
