@@ -45,5 +45,26 @@ if os.path.exists(log_file_path):
     else:
          print("\nNo expired certificates found.")
 
+    report_path = os.path.join("reports", "compliance_report.txt")
+
+    with open(report_path, "w") as report_file:
+        report_file.write("=== Compliance Summary === \n\n")
+
+        if failed_login_counts:
+            report_file.write("Failed Login Attempts:\n")
+            for user, count in failed_login_counts.items():
+                report_file.write(f" - {user}: {count} failed attempt(s)\n")
+        else:
+            report_file.write("No failed logins found.\n")
+
+        if expired_certs:
+            report_file.write("\nExpired Certificates:\n")
+            for cert in expired_certs:
+                report_file.write(f" - {cert}\n")
+        else:
+            report_file.write("\nNo expired certifications found. \n")
+
+    print(f"\nSummary saved to: {report_path}")
+
 else:
     print("Log file not found.")
