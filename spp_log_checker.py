@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 log_file_path = os.path.join("logs", "system_log_2025-06-25.log")
 
@@ -45,7 +46,9 @@ if os.path.exists(log_file_path):
     else:
          print("\nNo expired certificates found.")
 
-    report_path = os.path.join("reports", "compliance_report.txt")
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    report_filename = f"compliance_report_{timestamp}.txt"
+    report_path = os.path.join("reports", report_filename)
 
     with open(report_path, "w") as report_file:
         report_file.write("=== Compliance Summary === \n\n")
@@ -54,6 +57,16 @@ if os.path.exists(log_file_path):
             report_file.write("Failed Login Attempts:\n")
             for user, count in failed_login_counts.items():
                 report_file.write(f" - {user}: {count} failed attempt(s)\n")
+
+            alert_triggered = False
+            report_file.write("\nPotential Security Alerts:\n")
+            for user, count in failed_login_counts.items():
+                if count >= 3:
+                    alert_triggered = True
+                    report_file.write(f" !! ALERT: {user} had {count} failed logins\n")
+
+            if not alert_triggered:
+                report_file.write(" No users exceeded login failure threshold.\n")
         else:
             report_file.write("No failed logins found.\n")
 
